@@ -1,0 +1,159 @@
+# Jekyll Configuration for Portfolio Site
+# This file enables optional Jekyll features if you want to use static site generation
+
+# Site settings
+title: "Tom Suter - Software Engineer"
+description: "Software Engineer Portfolio. Explore my projects, blog posts, and get in touch."
+url: "https://your-username.github.io" # Update with your GitHub Pages URL
+baseurl: "" # Leave empty if hosting at root domain
+
+# Author information
+author:
+  name: "Tom Suter"
+  email: "tom.suter@example.com"
+  twitter: "your-twitter-handle"
+  github: "your-username"
+  linkedin: "tomsuter"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude these files from the built site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - .git
+
+# Include these files in the built site
+include:
+  - _pages
+
+# Collections (optional - for blog posts)
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default values for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tom Suter"
+
+# SEO settings
+twitter:
+  username: your-twitter-handle
+
+facebook:
+  app_id: # Your Facebook App ID
+  publisher: # Your Facebook Page URL
+
+social:
+  name: Tom Suter
+  links:
+    - https://twitter.com/your-twitter-handle
+    - https://github.com/your-username
+    - https://linkedin.com/in/tomsuter
+
+# Google Analytics (optional)
+google_analytics: # Your Google Analytics tracking ID
+
+# Timezone
+timezone: America/New_York # Update with your timezone
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Compression settings
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: [html, head, body]
+
+# Language settings
+languages: ["en", "fr"]
+default_lang: "en"
+
+# Contact form settings (Formspree)
+formspree:
+  contact_form_id: "YOUR_FORM_ID" # Replace with your Formspree form ID
+
+# Blog settings
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/#projects"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Contact"
+    url: "/#contact"
+
+# Footer links
+footer_links:
+  - title: "GitHub"
+    url: "https://github.com/your-username"
+    icon: "github"
+  - title: "LinkedIn"
+    url: "https://linkedin.com/in/tomsuter"
+    icon: "linkedin"
+  - title: "Email"
+    url: "mailto:tom.suter@example.com"
+    icon: "email"
+
+# Site verification (optional)
+google_site_verification: # Your Google Search Console verification code
+bing_site_verification: # Your Bing Webmaster verification code
+
+# Open Graph defaults
+og_image: "/assets/profile.jpg" # Default Open Graph image
+
+# Twitter Card defaults
+twitter_card: summary_large_image
+
+# Liquid settings
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# Markdown settings
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Performance settings
+incremental: true
+
+# Development settings
+livereload: true # Enable live reload during development
+host: 0.0.0.0 # Allow external access during development
+port: 4000 # Development server port

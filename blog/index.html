@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tom Suter's Blog - Thoughts on web development, software engineering, and technology.">
+    
+    <title>Blog - Tom Suter</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+    <style>
+        /* Additional styles for blog page */
+        .blog-header {
+            background: var(--color-background-alt);
+            padding: var(--space-16) 0 var(--space-8) 0;
+            margin-top: 80px;
+        }
+        
+        .blog-header h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: var(--space-4);
+            color: var(--color-text);
+        }
+        
+        .blog-header p {
+            font-size: var(--font-size-lg);
+            text-align: center;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .blog-content {
+            padding: var(--space-16) 0;
+        }
+        
+        .blog-filters {
+            display: flex;
+            gap: var(--space-2);
+            margin-bottom: var(--space-12);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--color-border);
+            color: var(--color-text);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            transition: var(--transition-fast);
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+        
+        .blog-posts-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+        }
+        
+        .blog-post-full {
+            background: white;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-8);
+            transition: var(--transition-fast);
+        }
+        
+        .blog-post-full:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .blog-post-full .blog-post-title {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--space-3);
+        }
+        
+        .blog-post-tags {
+            display: flex;
+            gap: var(--space-2);
+            margin-top: var(--space-4);
+            flex-wrap: wrap;
+        }
+        
+        .blog-tag {
+            background: var(--color-background-alt);
+            color: var(--color-text);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+        }
+        
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: var(--space-8);
+            transition: var(--transition-fast);
+        }
+        
+        .back-to-home:hover {
+            color: var(--color-primary-dark);
+        }
+        
+        .back-to-home::before {
+            content: '←';
+            font-size: var(--font-size-lg);
+        }
+        
+        @media (min-width: 768px) {
+            .blog-posts-full {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .blog-posts-full {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header with Navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="../index.html" class="logo-link">Tom Suter</a></h1>
+                </div>
+                
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                        <li><a href="../blog/" class="nav-link">Blog</a></li>
+                        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en" aria-label="Switch to English">EN</button>
+                    <button class="lang-btn" data-lang="fr" aria-label="Switch to French">FR</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main">
+        <!-- Blog Header -->
+        <section class="blog-header">
+            <div class="container">
+                <h1 data-en="Blog" data-fr="Blog">Blog</h1>
+                <p data-en="Thoughts on web development, software engineering, and technology." data-fr="Réflexions sur le développement web, l'ingénierie logicielle et la technologie.">Thoughts on web development, software engineering, and technology.</p>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="blog-content">
+            <div class="container">
+                <a href="../index.html" class="back-to-home" data-en="Back to Home" data-fr="Retour à l'Accueil">Back to Home</a>
+                
+                <!-- Blog Filters -->
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all" data-en="All Posts" data-fr="Tous les Articles">All Posts</button>
+                    <button class="filter-btn" data-filter="javascript" data-en="JavaScript" data-fr="JavaScript">JavaScript</button>
+                    <button class="filter-btn" data-filter="react" data-en="React" data-fr="React">React</button>
+                    <button class="filter-btn" data-filter="web development" data-en="Web Development" data-fr="Développement Web">Web Development</button>
+                </div>
+                
+                <!-- Blog Posts -->
+                <div class="blog-posts-full" id="blog-posts-full">
+                    <!-- Blog posts will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span data-en="© 2024 Tom Suter. All rights reserved." data-fr="© 2024 Tom Suter. Tous droits réservés.">© 2024 Tom Suter. All rights reserved.</span>
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+                    <a href="https://linkedin.com/in/tomsuter" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="mailto:tom.suter@example.com" aria-label="Send Email">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Additional JavaScript for blog page
+        class BlogPage extends PortfolioSite {
+            constructor() {
+                super();
+                this.allPosts = [];
+                this.currentFilter = 'all';
+                this.setupBlogFilters();
+            }
+            
+            async loadBlogPosts() {
+                try {
+                    const response = await fetch('posts.json');
+                    if (!response.ok) {
+                        throw new Error('Failed to load blog posts');
+                    }
+                    
+                    const data = await response.json();
+                    this.allPosts = data.posts || [];
+                    this.renderFullBlogPosts();
+                } catch (error) {
+                    console.warn('Could not load blog posts:', error);
+                }
+            }
+            
+            renderFullBlogPosts() {
+                const blogContainer = document.getElementById('blog-posts-full');
+                if (!blogContainer) return;
+
+                const filteredPosts = this.filterPosts(this.allPosts);
+                
+                if (filteredPosts.length === 0) {
+                    blogContainer.innerHTML = `
+                        <div style="grid-column: 1/-1; text-align: center; padding: var(--space-12);">
+                            <p data-en="No posts found for this filter." data-fr="Aucun article trouvé pour ce filtre.">No posts found for this filter.</p>
+                        </div>
+                    `;
+                    this.updateTranslations();
+                    return;
+                }
+                
+                blogContainer.innerHTML = filteredPosts.map(post => `
+                    <article class="blog-post-full">
+                        <h2 class="blog-post-title">
+                            <a href="${post.url}">
+                                ${this.getTranslatedText(post.title)}
+                            </a>
+                        </h2>
+                        <div class="blog-post-meta">
+                            <time datetime="${post.date}">${this.formatDate(post.date)}</time>
+                            ${post.readTime ? `• ${post.readTime} min read` : ''}
+                        </div>
+                        <p class="blog-post-excerpt">
+                            ${this.getTranslatedText(post.excerpt)}
+                        </p>
+                        ${post.tags ? `
+                            <div class="blog-post-tags">
+                                ${post.tags.map(tag => `<span class="blog-tag">${tag}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </article>
+                `).join('');
+            }
+            
+            setupBlogFilters() {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const filter = e.target.dataset.filter;
+                        this.setFilter(filter);
+                    });
+                });
+            }
+            
+            setFilter(filter) {
+                this.currentFilter = filter;
+                
+                // Update button states
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                filterButtons.forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.filter === filter);
+                });
+                
+                // Re-render posts
+                this.renderFullBlogPosts();
+            }
+            
+            filterPosts(posts) {
+                if (this.currentFilter === 'all') {
+                    return posts;
+                }
+                
+                return posts.filter(post => 
+                    post.tags && post.tags.some(tag => 
+                        tag.toLowerCase().includes(this.currentFilter.toLowerCase())
+                    )
+                );
+            }
+        }
+        
+        // Initialize blog page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            window.portfolio = new BlogPage();
+        });
+    </script>
+</body>
+</html>

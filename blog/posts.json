@@ -1,0 +1,72 @@
+{
+  "posts": [
+    {
+      "id": "modern-web-development-2024",
+      "title": {
+        "en": "Getting Started with Modern Web Development",
+        "fr": "Débuter avec le Développement Web Moderne"
+      },
+      "excerpt": {
+        "en": "A comprehensive guide to modern web development tools and practices that every developer should know in 2024.",
+        "fr": "Un guide complet des outils et pratiques de développement web moderne que tout développeur devrait connaître en 2024."
+      },
+      "content": {
+        "en": "# Getting Started with Modern Web Development\n\nThe web development landscape has evolved significantly over the past few years. In this post, we'll explore the essential tools and practices that define modern web development...",
+        "fr": "# Débuter avec le Développement Web Moderne\n\nLe paysage du développement web a considérablement évolué ces dernières années. Dans cet article, nous explorerons les outils et pratiques essentiels qui définissent le développement web moderne..."
+      },
+      "date": "2024-01-15",
+      "readTime": 5,
+      "tags": ["web development", "javascript", "best practices"],
+      "url": "blog/modern-web-development-2024.html",
+      "author": "Tom Suter",
+      "published": true
+    },
+    {
+      "id": "react-scalable-applications",
+      "title": {
+        "en": "Building Scalable React Applications",
+        "fr": "Construire des Applications React Évolutives"
+      },
+      "excerpt": {
+        "en": "Learn best practices for building React applications that scale with your business needs and team size.",
+        "fr": "Apprenez les meilleures pratiques pour construire des applications React qui évoluent avec vos besoins commerciaux et la taille de votre équipe."
+      },
+      "content": {
+        "en": "# Building Scalable React Applications\n\nScaling React applications goes beyond just adding more components. It's about architecture, state management, and developer experience...",
+        "fr": "# Construire des Applications React Évolutives\n\nFaire évoluer les applications React va au-delà de l'ajout de composants. Il s'agit d'architecture, de gestion d'état et d'expérience développeur..."
+      },
+      "date": "2024-01-08",
+      "readTime": 8,
+      "tags": ["react", "javascript", "architecture", "scalability"],
+      "url": "blog/react-scalable-applications.html",
+      "author": "Tom Suter",
+      "published": true
+    },
+    {
+      "id": "javascript-future-2024",
+      "title": {
+        "en": "The Future of JavaScript: What's Coming in 2024",
+        "fr": "L'Avenir de JavaScript : Ce qui Arrive en 2024"
+      },
+      "excerpt": {
+        "en": "Exploring upcoming JavaScript features and how they will change the way we write code in the near future.",
+        "fr": "Explorer les fonctionnalités JavaScript à venir et comment elles changeront notre façon d'écrire du code dans un avenir proche."
+      },
+      "content": {
+        "en": "# The Future of JavaScript: What's Coming in 2024\n\nJavaScript continues to evolve at a rapid pace. Let's look at the upcoming features that will shape how we develop applications...",
+        "fr": "# L'Avenir de JavaScript : Ce qui Arrive en 2024\n\nJavaScript continue d'évoluer à un rythme rapide. Regardons les fonctionnalités à venir qui façonneront la façon dont nous développons des applications..."
+      },
+      "date": "2024-01-01",
+      "readTime": 6,
+      "tags": ["javascript", "es2024", "future", "language features"],
+      "url": "blog/javascript-future-2024.html",
+      "author": "Tom Suter",
+      "published": true
+    }
+  ],
+  "meta": {
+    "totalPosts": 3,
+    "lastUpdated": "2024-01-15T10:00:00Z",
+    "languages": ["en", "fr"]
+  }
+}

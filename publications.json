@@ -1,0 +1,121 @@
+{
+  "publications": [
+    {
+      "id": "scalable-microservices-2023",
+      "title": {
+        "en": "Scalable Microservices Architecture for Modern Web Applications",
+        "fr": "Architecture de Microservices Évolutive pour les Applications Web Modernes"
+      },
+      "authors": ["Tom Suter", "Dr. Jane Smith"],
+      "journal": "Journal of Software Engineering",
+      "year": 2023,
+      "volume": "15",
+      "issue": "3",
+      "pages": "45-62",
+      "doi": "10.1000/jse.2023.15.3.45",
+      "abstract": {
+        "en": "This paper presents a comprehensive framework for designing and implementing scalable microservices architectures in modern web applications. We introduce novel patterns for service communication, data consistency, and fault tolerance that significantly improve system reliability and performance.",
+        "fr": "Cet article présente un cadre complet pour la conception et l'implémentation d'architectures de microservices évolutives dans les applications web modernes. Nous introduisons de nouveaux modèles pour la communication de services, la cohérence des données et la tolérance aux pannes qui améliorent significativement la fiabilité et les performances du système."
+      },
+      "keywords": ["microservices", "scalability", "web architecture", "distributed systems"],
+      "type": "journal",
+      "status": "published",
+      "url": "https://doi.org/10.1000/jse.2023.15.3.45",
+      "pdf": "assets/publications/scalable-microservices-2023.pdf"
+    },
+    {
+      "id": "frontend-performance-optimization",
+      "title": {
+        "en": "Frontend Performance Optimization Techniques for Single Page Applications",
+        "fr": "Techniques d'Optimisation des Performances Frontend pour les Applications à Page Unique"
+      },
+      "authors": ["Tom Suter"],
+      "conference": "International Conference on Web Technologies",
+      "year": 2023,
+      "location": "San Francisco, CA, USA",
+      "pages": "123-130",
+      "abstract": {
+        "en": "This research explores advanced optimization techniques for improving the performance of single page applications. We present experimental results showing up to 40% improvement in load times through strategic code splitting and intelligent caching mechanisms.",
+        "fr": "Cette recherche explore des techniques d'optimisation avancées pour améliorer les performances des applications à page unique. Nous présentons des résultats expérimentaux montrant jusqu'à 40% d'amélioration des temps de chargement grâce à la division stratégique du code et aux mécanismes de mise en cache intelligents."
+      },
+      "keywords": ["performance optimization", "single page applications", "code splitting", "caching"],
+      "type": "conference",
+      "status": "published",
+      "url": "https://icwt2023.org/papers/frontend-performance",
+      "slides": "assets/publications/frontend-performance-slides.pdf",
+      "video": "https://www.youtube.com/watch?v=example"
+    },
+    {
+      "id": "ai-code-review-automation",
+      "title": {
+        "en": "Automated Code Review Using Machine Learning: A Comparative Study",
+        "fr": "Révision de Code Automatisée Utilisant l'Apprentissage Automatique : Une Étude Comparative"
+      },
+      "authors": ["Tom Suter", "Prof. Michael Johnson", "Dr. Sarah Chen"],
+      "journal": "ACM Transactions on Software Engineering and Methodology",
+      "year": 2022,
+      "volume": "31",
+      "issue": "4",
+      "pages": "1-28",
+      "doi": "10.1145/3501234.5678901",
+      "abstract": {
+        "en": "We present a comprehensive evaluation of machine learning approaches for automated code review. Our study compares traditional static analysis tools with modern ML-based solutions across multiple programming languages and project types, demonstrating significant improvements in bug detection rates.",
+        "fr": "Nous présentons une évaluation complète des approches d'apprentissage automatique pour la révision de code automatisée. Notre étude compare les outils d'analyse statique traditionnels avec les solutions modernes basées sur le ML à travers plusieurs langages de programmation et types de projets, démontrant des améliorations significatives des taux de détection de bugs."
+      },
+      "keywords": ["machine learning", "code review", "static analysis", "software quality"],
+      "type": "journal",
+      "status": "published",
+      "url": "https://dl.acm.org/doi/10.1145/3501234.5678901",
+      "pdf": "assets/publications/ai-code-review-2022.pdf",
+      "citations": 45
+    },
+    {
+      "id": "blockchain-web-security",
+      "title": {
+        "en": "Enhancing Web Application Security Through Blockchain-Based Authentication",
+        "fr": "Amélioration de la Sécurité des Applications Web par l'Authentification Basée sur la Blockchain"
+      },
+      "authors": ["Tom Suter", "Dr. Alex Rivera"],
+      "conference": "IEEE International Conference on Blockchain Technology",
+      "year": 2022,
+      "location": "London, UK",
+      "pages": "67-74",
+      "abstract": {
+        "en": "This paper proposes a novel blockchain-based authentication system for web applications that provides enhanced security while maintaining user experience. Our implementation demonstrates resistance to common attack vectors while reducing authentication overhead by 25%.",
+        "fr": "Cet article propose un nouveau système d'authentification basé sur la blockchain pour les applications web qui offre une sécurité renforcée tout en maintenant l'expérience utilisateur. Notre implémentation démontre une résistance aux vecteurs d'attaque courants tout en réduisant la surcharge d'authentification de 25%."
+      },
+      "keywords": ["blockchain", "web security", "authentication", "distributed systems"],
+      "type": "conference",
+      "status": "published",
+      "url": "https://ieeexplore.ieee.org/document/9876543",
+      "slides": "assets/publications/blockchain-security-slides.pdf"
+    },
+    {
+      "id": "progressive-web-apps-study",
+      "title": {
+        "en": "Progressive Web Applications: Performance and User Experience Analysis",
+        "fr": "Applications Web Progressives : Analyse des Performances et de l'Expérience Utilisateur"
+      },
+      "authors": ["Tom Suter"],
+      "journal": "Web Technologies Quarterly",
+      "year": 2024,
+      "volume": "8",
+      "issue": "1",
+      "pages": "15-32",
+      "abstract": {
+        "en": "An in-depth analysis of Progressive Web Applications focusing on performance metrics and user experience across different platforms and network conditions. This study provides guidelines for optimal PWA implementation strategies.",
+        "fr": "Une analyse approfondie des Applications Web Progressives se concentrant sur les métriques de performance et l'expérience utilisateur à travers différentes plateformes et conditions réseau. Cette étude fournit des directives pour les stratégies d'implémentation PWA optimales."
+      },
+      "keywords": ["progressive web apps", "performance analysis", "user experience", "mobile web"],
+      "type": "journal",
+      "status": "under review",
+      "preprint": "https://arxiv.org/abs/2024.01234"
+    }
+  ],
+  "meta": {
+    "totalPublications": 5,
+    "lastUpdated": "2024-01-15T10:00:00Z",
+    "categories": ["journal", "conference"],
+    "years": [2022, 2023, 2024]
+  }
+}
