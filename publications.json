@@ -6,7 +6,7 @@
         "en": "Scalable Microservices Architecture for Modern Web Applications",
         "fr": "Architecture de Microservices Évolutive pour les Applications Web Modernes"
       },
-      "authors": ["Tom Suter", "Dr. Jane Smith"],
+      "authors": ["Tom S.", "Dr. Jane Smith"],
       "journal": "Journal of Software Engineering",
       "year": 2023,
       "volume": "15",
@@ -29,7 +29,7 @@
         "en": "Frontend Performance Optimization Techniques for Single Page Applications",
         "fr": "Techniques d'Optimisation des Performances Frontend pour les Applications à Page Unique"
       },
-      "authors": ["Tom Suter"],
+      "authors": ["Tom S."],
       "conference": "International Conference on Web Technologies",
       "year": 2023,
       "location": "San Francisco, CA, USA",
@@ -51,7 +51,7 @@
         "en": "Automated Code Review Using Machine Learning: A Comparative Study",
         "fr": "Révision de Code Automatisée Utilisant l'Apprentissage Automatique : Une Étude Comparative"
       },
-      "authors": ["Tom Suter", "Prof. Michael Johnson", "Dr. Sarah Chen"],
+      "authors": ["Tom S.", "Prof. Michael Johnson", "Dr. Sarah Chen"],
       "journal": "ACM Transactions on Software Engineering and Methodology",
       "year": 2022,
       "volume": "31",
@@ -75,7 +75,7 @@
         "en": "Enhancing Web Application Security Through Blockchain-Based Authentication",
         "fr": "Amélioration de la Sécurité des Applications Web par l'Authentification Basée sur la Blockchain"
       },
-      "authors": ["Tom Suter", "Dr. Alex Rivera"],
+      "authors": ["Tom S.", "Dr. Alex Rivera"],
       "conference": "IEEE International Conference on Blockchain Technology",
       "year": 2022,
       "location": "London, UK",
@@ -96,7 +96,7 @@
         "en": "Progressive Web Applications: Performance and User Experience Analysis",
         "fr": "Applications Web Progressives : Analyse des Performances et de l'Expérience Utilisateur"
       },
-      "authors": ["Tom Suter"],
+      "authors": ["Tom S."],
       "journal": "Web Technologies Quarterly",
       "year": 2024,
       "volume": "8",

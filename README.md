@@ -1,4 +1,4 @@
-# Tom Suter - Portfolio Website
+# Tom S. - Portfolio Website
 
 A fast, accessible, and responsive portfolio website built with plain HTML, CSS, and JavaScript. Designed for easy hosting on GitHub Pages with optional Jekyll support.
 
@@ -43,7 +43,7 @@ Portfolio/
 Update the following files with your own content:
 
 #### `index.html`
-- Replace "Tom Suter" with your name
+- Replace "Tom S." with your name
 - Update hero section tagline and skills
 - Replace project information (titles, descriptions, tech stacks, links)
 - Update contact information (email, LinkedIn, GitHub)
