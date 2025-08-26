@@ -2,18 +2,17 @@
 # This file enables optional Jekyll features if you want to use static site generation
 
 # Site settings
-title: "Tom S. - Software Engineer"
-description: "Software Engineer Portfolio. Explore my projects, blog posts, and get in touch."
+title: "Tom S. - Data Scientist"
+description: "Data Scientist Portfolio. Explore my projects, blog posts, and get in touch."
 url: "https://your-username.github.io" # Update with your GitHub Pages URL
 baseurl: "" # Leave empty if hosting at root domain
 
 # Author information
 author:
   name: "Tom S."
-  email: "tom.suter@example.com"
+  email: "supertom02@hotmail.com"
   twitter: "your-twitter-handle"
-  github: "your-username"
-  linkedin: "tomsuter"
+  github: "frankydbravo"
 
 # Build settings
 markdown: kramdown
