@@ -18,7 +18,7 @@
       "readTime": 5,
       "tags": ["web development", "javascript", "best practices"],
       "url": "blog/modern-web-development-2024.html",
-      "author": "Tom S.",
+      "author": "Tom",
       "published": true
     },
     {
@@ -39,7 +39,7 @@
       "readTime": 8,
       "tags": ["react", "javascript", "architecture", "scalability"],
       "url": "blog/react-scalable-applications.html",
-      "author": "Tom S.",
+      "author": "Tom",
       "published": true
     },
     {
@@ -60,7 +60,7 @@
       "readTime": 6,
       "tags": ["javascript", "es2024", "future", "language features"],
       "url": "blog/javascript-future-2024.html",
-      "author": "Tom S.",
+      "author": "Tom",
       "published": true
     }
   ],

@@ -126,15 +126,15 @@ class PortfolioSite {
 
         // Update page title
         const titles = {
-            en: 'Tom S. - Software Engineer',
-            fr: 'Tom S. - Ingénieur Logiciel'
+            en: 'Tom - Software Engineer',
+            fr: 'Tom - Ingénieur Logiciel'
         };
         document.title = titles[this.currentLanguage];
 
         // Update meta description
         const descriptions = {
-            en: 'Tom S. - Software Engineer Portfolio. Explore my projects, blog posts, and get in touch.',
-            fr: 'Tom S. - Portfolio d\'Ingénieur Logiciel. Explorez mes projets, articles de blog et contactez-moi.'
+            en: 'Tom - Software Engineer Portfolio. Explore my projects, blog posts, and get in touch.',
+            fr: 'Tom - Portfolio d\'Ingénieur Logiciel. Explorez mes projets, articles de blog et contactez-moi.'
         };
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {

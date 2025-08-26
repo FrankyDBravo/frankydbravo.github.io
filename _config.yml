@@ -2,14 +2,14 @@
 # This file enables optional Jekyll features if you want to use static site generation
 
 # Site settings
-title: "Tom S. - Data Scientist"
+title: "Tom - Data Scientist"
 description: "Data Scientist Portfolio. Explore my projects, blog posts, and get in touch."
 url: "https://your-username.github.io" # Update with your GitHub Pages URL
 baseurl: "" # Leave empty if hosting at root domain
 
 # Author information
 author:
-  name: "Tom S."
+  name: "Tom"
   email: "supertom02@hotmail.com"
   twitter: "your-twitter-handle"
   github: "frankydbravo"
@@ -52,7 +52,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Tom S."
+      author: "Tom"
 
 # SEO settings
 twitter:
@@ -63,7 +63,7 @@ facebook:
   publisher: # Your Facebook Page URL
 
 social:
-  name: Tom S.
+  name: Tom
   links:
     - https://twitter.com/your-twitter-handle
     - https://github.com/your-username

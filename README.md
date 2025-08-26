@@ -1,4 +1,4 @@
-# Tom S. - Portfolio Website
+# Tom - Portfolio Website
 
 A fast, accessible, and responsive portfolio website built with plain HTML, CSS, and JavaScript. Designed for easy hosting on GitHub Pages with optional Jekyll support.
 
@@ -43,7 +43,7 @@ Portfolio/
 Update the following files with your own content:
 
 #### `index.html`
-- Replace "Tom S." with your name
+- Replace "Tom" with your name
 - Update hero section tagline and skills
 - Replace project information (titles, descriptions, tech stacks, links)
 - Update contact information (email, GitHub)
