@@ -403,91 +403,152 @@ body {
 /* Skills and Education Section */
 .skills-education {
     background: var(--color-background-alt);
-    padding: var(--space-20) 0;
+    padding: var(--space-16) 0;
 }
 
-.skills-boxes-grid {
+.compact-layout {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-8);
 }
 
-/* Skill Categories */
-.skill-category {
-    margin-bottom: var(--space-6);
-}
-
-.skill-category:last-child {
-    margin-bottom: 0;
-}
-
-.skill-category-title {
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: var(--space-3);
-    border-left: 4px solid var(--color-primary);
-    padding-left: var(--space-4);
-}
-
-.skill-items {
+.left-column, .right-column {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.compact-box {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.compact-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: var(--space-4);
+}
+
+/* Languages */
+.language-list {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-2);
 }
 
-.skill-item {
-    background: var(--color-background-alt);
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) 0;
+}
+
+.language-name {
+    font-weight: 500;
     color: var(--color-text);
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--border-radius);
+}
+
+.language-level {
     font-size: var(--font-size-sm);
     font-weight: 500;
-    border: 1px solid var(--color-border);
-    transition: var(--transition-fast);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--border-radius);
 }
 
-.skill-item:hover {
+.language-level.native {
     background: var(--color-primary);
     color: white;
-    border-color: var(--color-primary);
-    transform: translateY(-1px);
 }
 
-/* Education Box */
-.info-box {
-    background: white;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-lg);
-    padding: var(--space-8);
-    transition: var(--transition-normal);
-    box-shadow: var(--shadow-sm);
+.language-level.fluent {
+    background: var(--color-accent);
+    color: white;
 }
 
-.info-box:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-.info-box-title {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
+.language-level.basics {
+    background: var(--color-background-alt);
     color: var(--color-text);
-    margin-bottom: var(--space-6);
-    text-align: center;
-    position: relative;
+    border: 1px solid var(--color-border);
 }
 
-.info-box-title::after {
-    content: '';
-    position: absolute;
-    bottom: -var(--space-3);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--color-primary);
+/* Education Compact */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.education-item-compact {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+}
+
+.education-bullet {
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.education-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+/* Technical Skills Compact */
+.skills-grid-compact {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.skill-section-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: var(--space-2);
+}
+
+.skill-subsection {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--color-background-alt);
     border-radius: var(--border-radius);
+    border: 1px solid var(--color-border-light);
+}
+
+.skill-icon {
+    font-size: var(--font-size-lg);
+    min-width: 24px;
+}
+
+.skill-name {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-1);
+    line-height: 1.3;
+}
+
+.skill-details {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: 1.4;
+    margin: 0;
 }
 
 /* Education Styles */
@@ -878,9 +939,15 @@ body {
         justify-content: flex-start;
     }
     
-    .skills-boxes-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .compact-layout {
+        grid-template-columns: 300px 1fr;
         gap: var(--space-12);
+        align-items: start;
+    }
+    
+    .skills-grid-compact {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
     }
     
     .projects-grid {
