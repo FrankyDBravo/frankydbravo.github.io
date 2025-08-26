@@ -67,7 +67,6 @@ social:
   links:
     - https://twitter.com/your-twitter-handle
     - https://github.com/your-username
-    - https://linkedin.com/in/tomsuter
 
 # Google Analytics (optional)
 google_analytics: # Your Google Analytics tracking ID
@@ -115,9 +114,6 @@ footer_links:
   - title: "GitHub"
     url: "https://github.com/your-username"
     icon: "github"
-  - title: "LinkedIn"
-    url: "https://linkedin.com/in/tomsuter"
-    icon: "linkedin"
   - title: "Email"
     url: "mailto:tom.suter@example.com"
     icon: "email"

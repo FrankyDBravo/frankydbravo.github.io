@@ -46,7 +46,7 @@ Update the following files with your own content:
 - Replace "Tom S." with your name
 - Update hero section tagline and skills
 - Replace project information (titles, descriptions, tech stacks, links)
-- Update contact information (email, LinkedIn, GitHub)
+- Update contact information (email, GitHub)
 - Replace Formspree form action with your endpoint
 
 #### `assets/`
