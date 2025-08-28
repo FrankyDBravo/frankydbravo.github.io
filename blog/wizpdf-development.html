@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The process of creating WizPDF - a comprehensive PDF management tool for merging, modifying, and summarizing PDFs on both iOS and Android platforms.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Developing WizPDF: PDF App for iOS">
+    <meta property="og:description" content="The process of creating a mobile application — a comprehensive PDF management tool for merging, modifying, and summarizing PDFs on both iOS and Android platforms.">
+    <meta property="og:url" content="https://your-username.github.io/blog/wizpdf-development.html">
+    <meta property="og:image" content="https://your-username.github.io/assets/profile.jpg">
+    
+    <title>Developing WizPDF: PDF App for iOS - Tom's Blog</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+    <style>
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+        }
+        
+        .blog-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .blog-meta {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .blog-content h1, .blog-content h2, .blog-content h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h1 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.5rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.25rem;
+        }
+        
+        .blog-content pre {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        .blog-content code {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .app-link {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .app-link:hover {
+            background: var(--accent-hover);
+        }
+        
+        .highlight-box {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-article">
+        <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+        
+        <header class="blog-header">
+            <h1 class="blog-title">Developing WizPDF: PDF App for iOS</h1>
+            <div class="blog-meta">
+                <time datetime="2024-01-25">January 25, 2024</time> • 10 min read • By Tom
+            </div>
+        </header>
+        
+        <div class="blog-content">
+            <div class="highlight-box">
+                <p><strong>The process of creating a mobile application — a comprehensive PDF management tool for merging, modifying, and summarizing PDFs on both iOS and Android platforms.</strong></p>
+                <a href="https://www.wizpdf.xyz/" class="app-link" target="_blank" rel="noopener noreferrer">
+                    🔗 Visit WizPDF Website
+                </a>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>WizPDF represents a comprehensive solution for PDF management on mobile devices. The application addresses the growing need for powerful PDF manipulation tools that work seamlessly across iOS and Android platforms.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>PDF Merging:</strong> Combine multiple PDF documents into a single file</li>
+                <li><strong>Document Modification:</strong> Edit, annotate, and modify existing PDFs</li>
+                <li><strong>AI-Powered Summarization:</strong> Generate intelligent summaries of PDF content</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Native performance on both iOS and Android</li>
+                <li><strong>Cloud Integration:</strong> Seamless synchronization across devices</li>
+            </ul>
+
+            <h2>Development Challenges</h2>
+            <p>Creating a robust PDF management application presented several technical challenges:</p>
+
+            <h3>Performance Optimization</h3>
+            <p>Handling large PDF files on mobile devices requires careful memory management and efficient rendering algorithms. We implemented lazy loading and progressive rendering to ensure smooth user experience even with complex documents.</p>
+
+            <h3>Cross-Platform Development</h3>
+            <p>Maintaining feature parity between iOS and Android while leveraging platform-specific capabilities required a strategic approach to architecture and development workflows.</p>
+
+            <h3>AI Integration</h3>
+            <p>Implementing intelligent document summarization involved integrating natural language processing capabilities while maintaining user privacy and data security.</p>
+
+            <h2>Technical Architecture</h2>
+            <p>The application is built using a modern mobile development stack:</p>
+
+            <ul>
+                <li><strong>Frontend:</strong> React Native for cross-platform compatibility</li>
+                <li><strong>PDF Processing:</strong> Custom native modules for optimal performance</li>
+                <li><strong>AI Services:</strong> Cloud-based NLP for document analysis</li>
+                <li><strong>Storage:</strong> Hybrid local/cloud storage solution</li>
+            </ul>
+
+            <h2>User Experience Design</h2>
+            <p>The interface prioritizes simplicity and efficiency, allowing users to accomplish complex PDF operations with minimal steps. Key design principles include:</p>
+
+            <ul>
+                <li>Intuitive gesture-based navigation</li>
+                <li>Context-aware toolbars and menus</li>
+                <li>Consistent visual hierarchy across all screens</li>
+                <li>Accessibility compliance for inclusive design</li>
+            </ul>
+
+            <h2>Security and Privacy</h2>
+            <p>Given the sensitive nature of document management, WizPDF implements robust security measures:</p>
+
+            <ul>
+                <li>End-to-end encryption for document storage</li>
+                <li>Local processing for sensitive operations</li>
+                <li>Secure authentication and authorization</li>
+                <li>GDPR compliance for data handling</li>
+            </ul>
+
+            <h2>Performance Metrics</h2>
+            <p>The application achieves impressive performance benchmarks:</p>
+
+            <ul>
+                <li>Sub-second PDF loading for documents up to 50MB</li>
+                <li>Real-time editing with minimal latency</li>
+                <li>Efficient battery usage through optimized algorithms</li>
+                <li>Smooth 60fps scrolling and zooming</li>
+            </ul>
+
+            <h2>Future Enhancements</h2>
+            <p>The roadmap for WizPDF includes several exciting features:</p>
+
+            <ul>
+                <li>Advanced OCR capabilities for scanned documents</li>
+                <li>Collaborative editing and sharing features</li>
+                <li>Integration with popular cloud storage services</li>
+                <li>Enhanced AI features for document analysis</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Developing WizPDF has been an exciting journey in mobile application development, combining cutting-edge technology with user-centered design. The application demonstrates how modern mobile apps can provide desktop-level functionality while maintaining the simplicity and accessibility that users expect from mobile experiences.</p>
+
+            <p>The success of WizPDF lies in its ability to solve real-world problems through thoughtful engineering and design decisions. As we continue to evolve the platform, we remain committed to providing users with the most powerful and intuitive PDF management experience available on mobile devices.</p>
+
+            <div class="highlight-box">
+                <p><strong>Ready to experience the future of PDF management?</strong></p>
+                <a href="https://www.wizpdf.xyz/" class="app-link" target="_blank" rel="noopener noreferrer">
+                    📱 Download WizPDF Today
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
