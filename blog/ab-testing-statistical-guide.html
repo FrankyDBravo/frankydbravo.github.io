@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master the statistical foundations of AB testing, from hypothesis formulation to sample size calculations, with practical examples and code implementations.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A Complete Guide to AB Testing: Statistical Foundations and Sample Size Calculations">
+    <meta property="og:description" content="Master the statistical foundations of AB testing, from hypothesis formulation to sample size calculations, with practical examples and code implementations.">
+    <meta property="og:url" content="https://your-username.github.io/blog/ab-testing-statistical-guide.html">
+    <meta property="og:image" content="https://your-username.github.io/assets/profile.jpg">
+    
+    <title>A Complete Guide to AB Testing - Tom's Blog</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+    <style>
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+        }
+        
+        .blog-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .blog-meta {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .blog-content h1, .blog-content h2, .blog-content h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h1 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.5rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.25rem;
+        }
+        
+        .blog-content pre {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        .blog-content code {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .github-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-article">
+        <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+        
+        <header class="blog-header">
+            <h1 class="blog-title">A Complete Guide to AB Testing: Statistical Foundations and Sample Size Calculations</h1>
+            <div class="blog-meta">
+                <time datetime="2024-01-20">January 20, 2024</time> • 12 min read • By Tom
+            </div>
+        </header>
+        
+        <div class="blog-content">
+            <p>AB testing is a fundamental tool in data science and product optimization. This comprehensive guide covers the statistical foundations, sample size calculations, and practical implementation strategies.</p>
+
+            <h2>Computing Sample Size and Duration</h2>
+            <p>Before running any AB test, we need to determine the appropriate sample size based on several key parameters:</p>
+
+            <pre><code># Current baseline metrics
+current_conv_rate = 0.1  # Base conversion rate (10%)
+std_dev = 1
+
+# Desired uplift: minimum detectable effect
+desired_uplift = 0.5  # 50% relative improvement
+
+# Statistical parameters
+statistical_power = 0.8  # Power (1-β)
+alpha = 0.05  # Significance level
+confidence_level = 1 - alpha  # 95% confidence
+side = 2  # Two-sided test
+
+# Business metrics
+number_of_events_per_week = 1000</code></pre>
+
+            <h2>Setting Up Hypotheses</h2>
+            <p>The foundation of any AB test lies in proper hypothesis formulation:</p>
+            
+            <p><strong>Null Hypothesis (H₀):</strong> The treatment has no effect (equality hypothesis)<br>
+            <strong>Alternative Hypothesis (H₁):</strong> The treatment has a significant effect</p>
+
+            <p>The alternative hypothesis can be:</p>
+            <ul>
+                <li><strong>Directional:</strong> Specifies direction (greater than or less than)</li>
+                <li><strong>Non-directional:</strong> Only specifies difference (not equal to)</li>
+            </ul>
+
+            <h2>Significance Level and Statistical Power</h2>
+            <p>The significance level (α = 0.05) represents the probability of rejecting H₀ when it's true (Type I error). Statistical power (1-β = 0.8) is the probability of correctly rejecting H₀ when it's false.</p>
+
+            <h2>Choosing the Right Test</h2>
+
+            <h3>For Continuous Data:</h3>
+
+            <h4>Z-Test (N > 30):</h4>
+            <p>When sample size exceeds 30, the Central Limit Theorem applies, and we can use the Z-test:</p>
+            <ul>
+                <li>H₀: Average metric is the same for both versions</li>
+                <li>H₁: Average metric differs between versions</li>
+            </ul>
+            <p>The Z-score represents standard deviations from the null hypothesis. Higher Z-scores indicate stronger evidence against H₀.</p>
+
+            <h4>Student's t-Test (N < 30):</h4>
+            <p>For smaller samples:</p>
+            <ul>
+                <li><strong>One-sample t-test:</strong> Compare sample mean to population mean</li>
+                <li><strong>Two-sample t-test:</strong> Compare means of two samples</li>
+            </ul>
+
+            <h3>For Binary Data (Conversion Rates):</h3>
+            <p>We can adapt the Z-test using binomial distribution moments. As sample size increases, results converge to Chi-square distribution behavior.</p>
+
+            <h2>Non-Inferiority Testing</h2>
+            <p>Sometimes we want to prove a new solution is "not worse" than the current one:</p>
+            <ul>
+                <li><strong>Null Hypothesis:</strong> Variant < Control - δ (worse than control minus tolerance)</li>
+                <li><strong>Alternative Hypothesis:</strong> Variant ≥ Control - δ (not significantly worse)</li>
+            </ul>
+            <p>The non-inferiority margin (δ) represents the maximum acceptable difference while still considering performance equivalent.</p>
+
+            <h2>Practical Implementation</h2>
+            <p>Key considerations for successful AB testing:</p>
+            <ol>
+                <li><strong>Sample Size Planning:</strong> Use power analysis to determine required sample size</li>
+                <li><strong>Test Duration:</strong> Balance statistical significance with business timelines</li>
+                <li><strong>Multiple Testing:</strong> Apply corrections when running multiple tests</li>
+                <li><strong>Practical Significance:</strong> Ensure detected effects are business-relevant</li>
+            </ol>
+
+            <h2>Conclusion</h2>
+            <p>Proper AB testing requires careful attention to statistical foundations, from hypothesis formulation to test selection. By understanding these principles, you can design experiments that provide reliable, actionable insights for your business decisions.</p>
+
+            <a href="https://github.com/FrankyDBravo/ABtesting" class="github-link" target="_blank" rel="noopener noreferrer">
+                View Complete Implementation on GitHub
+            </a>
+        </div>
+    </div>
+</body>
+</html>
