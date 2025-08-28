@@ -1,23 +1,23 @@
 {
   "posts": [
     {
-      "id": "modern-web-development-2024",
+      "id": "ab-testing-statistical-guide",
       "title": {
-        "en": "Getting Started with Modern Web Development",
-        "fr": "Débuter avec le Développement Web Moderne"
+        "en": "A Complete Guide to AB Testing: Statistical Foundations and Sample Size Calculations",
+        "fr": "Guide Complet des Tests AB : Fondements Statistiques et Calculs de Taille d'Échantillon"
       },
       "excerpt": {
-        "en": "A comprehensive guide to modern web development tools and practices that every developer should know in 2024.",
-        "fr": "Un guide complet des outils et pratiques de développement web moderne que tout développeur devrait connaître en 2024."
+        "en": "Master the statistical foundations of AB testing, from hypothesis formulation to sample size calculations, with practical examples and code implementations.",
+        "fr": "Maîtrisez les fondements statistiques des tests AB, de la formulation d'hypothèses aux calculs de taille d'échantillon, avec des exemples pratiques et des implémentations de code."
       },
       "content": {
-        "en": "# Getting Started with Modern Web Development\n\nThe web development landscape has evolved significantly over the past few years. In this post, we'll explore the essential tools and practices that define modern web development...",
-        "fr": "# Débuter avec le Développement Web Moderne\n\nLe paysage du développement web a considérablement évolué ces dernières années. Dans cet article, nous explorerons les outils et pratiques essentiels qui définissent le développement web moderne..."
+        "en": "# A Complete Guide to AB Testing: Statistical Foundations and Sample Size Calculations\n\nAB testing is a fundamental tool in data science and product optimization. This comprehensive guide covers the statistical foundations, sample size calculations, and practical implementation strategies.\n\n## Computing Sample Size and Duration\n\nBefore running any AB test, we need to determine the appropriate sample size based on several key parameters:\n\n```python\n# Current baseline metrics\ncurrent_conv_rate = 0.1  # Base conversion rate (10%)\nstd_dev = 1\n\n# Desired uplift: minimum detectable effect\ndesired_uplift = 0.5  # 50% relative improvement\n\n# Statistical parameters\nstatistical_power = 0.8  # Power (1-β)\nalpha = 0.05  # Significance level\nconfidence_level = 1 - alpha  # 95% confidence\nside = 2  # Two-sided test\n\n# Business metrics\nnumber_of_events_per_week = 1000\n```\n\n## Setting Up Hypotheses\n\nThe foundation of any AB test lies in proper hypothesis formulation:\n\n**Null Hypothesis (H₀):** The treatment has no effect (equality hypothesis)\n**Alternative Hypothesis (H₁):** The treatment has a significant effect\n\nThe alternative hypothesis can be:\n- **Directional:** Specifies direction (greater than or less than)\n- **Non-directional:** Only specifies difference (not equal to)\n\n## Significance Level and Statistical Power\n\nThe significance level (α = 0.05) represents the probability of rejecting H₀ when it's true (Type I error). Statistical power (1-β = 0.8) is the probability of correctly rejecting H₀ when it's false.\n\n## Choosing the Right Test\n\n### For Continuous Data:\n\n**Z-Test (N > 30):**\nWhen sample size exceeds 30, the Central Limit Theorem applies, and we can use the Z-test:\n\n- H₀: Average metric is the same for both versions\n- H₁: Average metric differs between versions\n\nThe Z-score represents standard deviations from the null hypothesis. Higher Z-scores indicate stronger evidence against H₀.\n\n**Student's t-Test (N < 30):**\nFor smaller samples:\n- **One-sample t-test:** Compare sample mean to population mean\n- **Two-sample t-test:** Compare means of two samples\n\n### For Binary Data (Conversion Rates):\n\nWe can adapt the Z-test using binomial distribution moments. As sample size increases, results converge to Chi-square distribution behavior.\n\n## Non-Inferiority Testing\n\nSometimes we want to prove a new solution is \"not worse\" than the current one:\n\n- **Null Hypothesis:** Variant < Control - δ (worse than control minus tolerance)\n- **Alternative Hypothesis:** Variant ≥ Control - δ (not significantly worse)\n\nThe non-inferiority margin (δ) represents the maximum acceptable difference while still considering performance equivalent.\n\n## Practical Implementation\n\nKey considerations for successful AB testing:\n\n1. **Sample Size Planning:** Use power analysis to determine required sample size\n2. **Test Duration:** Balance statistical significance with business timelines\n3. **Multiple Testing:** Apply corrections when running multiple tests\n4. **Practical Significance:** Ensure detected effects are business-relevant\n\n## Conclusion\n\nProper AB testing requires careful attention to statistical foundations, from hypothesis formulation to test selection. By understanding these principles, you can design experiments that provide reliable, actionable insights for your business decisions.\n\n[View the complete implementation on GitHub](https://github.com/FrankyDBravo/ABtesting)",
+        "fr": "# Guide Complet des Tests AB : Fondements Statistiques et Calculs de Taille d'Échantillon\n\nLes tests AB sont un outil fondamental en science des données et optimisation produit. Ce guide complet couvre les fondements statistiques, les calculs de taille d'échantillon et les stratégies d'implémentation pratiques.\n\n## Calcul de la Taille d'Échantillon et de la Durée\n\nAvant d'exécuter un test AB, nous devons déterminer la taille d'échantillon appropriée basée sur plusieurs paramètres clés:\n\n```python\n# Métriques de base actuelles\ncurrent_conv_rate = 0.1  # Taux de conversion de base (10%)\nstd_dev = 1\n\n# Amélioration désirée : effet minimum détectable\ndesired_uplift = 0.5  # 50% d'amélioration relative\n\n# Paramètres statistiques\nstatistical_power = 0.8  # Puissance (1-β)\nalpha = 0.05  # Niveau de signification\nconfidence_level = 1 - alpha  # 95% de confiance\nside = 2  # Test bilatéral\n\n# Métriques business\nnumber_of_events_per_week = 1000\n```\n\n## Formulation des Hypothèses\n\nLa base de tout test AB réside dans une formulation appropriée des hypothèses:\n\n**Hypothèse Nulle (H₀):** Le traitement n'a aucun effet (hypothèse d'égalité)\n**Hypothèse Alternative (H₁):** Le traitement a un effet significatif\n\n## Conclusion\n\nUn test AB approprié nécessite une attention particulière aux fondements statistiques, de la formulation d'hypothèses à la sélection de tests. En comprenant ces principes, vous pouvez concevoir des expériences qui fournissent des insights fiables et exploitables pour vos décisions business.\n\n[Voir l'implémentation complète sur GitHub](https://github.com/FrankyDBravo/ABtesting)"
       },
-      "date": "2024-01-15",
-      "readTime": 5,
-      "tags": ["web development", "javascript", "best practices"],
-      "url": "blog/modern-web-development-2024.html",
+      "date": "2024-01-20",
+      "readTime": 12,
+      "tags": ["ab testing", "statistics", "data science", "hypothesis testing"],
+      "url": "blog/ab-testing-statistical-guide.html",
       "author": "Tom",
       "published": true
     },
@@ -66,7 +66,7 @@
   ],
   "meta": {
     "totalPosts": 3,
-    "lastUpdated": "2024-01-15T10:00:00Z",
+    "lastUpdated": "2024-01-20T10:00:00Z",
     "languages": ["en", "fr"]
   }
 }
