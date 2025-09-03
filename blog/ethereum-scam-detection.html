@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how machine learning and blockchain analysis can be used to detect and prevent Ethereum-based scams and fraudulent transactions.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ethereum Scam Detection Using Machine Learning">
+    <meta property="og:description" content="Learn how machine learning and blockchain analysis can be used to detect and prevent Ethereum-based scams and fraudulent transactions.">
+    <meta property="og:url" content="https://your-username.github.io/blog/ethereum-scam-detection.html">
+    <meta property="og:image" content="https://your-username.github.io/assets/profile.jpg">
+    
+    <title>Ethereum Scam Detection Using Machine Learning - Tom's Blog</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    
+    <style>
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            line-height: 1.6;
+        }
+        
+        .blog-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .blog-meta {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .blog-content h1, .blog-content h2, .blog-content h3 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h1 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.5rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.25rem;
+        }
+        
+        .blog-content pre {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        .blog-content code {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .blog-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .github-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .github-link:hover {
+            background: var(--accent-hover);
+        }
+        
+        .highlight-box {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-article">
+        <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+        
+        <header class="blog-header">
+            <h1 class="blog-title">Ethereum Scam Detection Using Machine Learning</h1>
+            <div class="blog-meta">
+                <time datetime="2024-01-10">January 10, 2024</time> • 15 min read • By Tom
+            </div>
+        </header>
+        
+        <div class="blog-content">
+            <p>The rise of decentralized finance (DeFi) and cryptocurrency has brought unprecedented opportunities, but also new challenges in fraud detection. This comprehensive guide explores how machine learning techniques can be applied to detect Ethereum-based scams and protect users from fraudulent transactions.</p>
+
+            <div class="highlight-box">
+                <p><strong>🔍 Project Repository:</strong> All code examples and implementations discussed in this guide are available in the <a href="https://github.com/FrankyDBravo" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">GitHub Repository</a>.</p>
+            </div>
+
+            <h2>The Problem: Ethereum Scams</h2>
+            <p>Ethereum's smart contract functionality and decentralized nature have made it a target for various types of scams:</p>
+            
+            <ul>
+                <li><strong>Ponzi Schemes:</strong> Smart contracts that promise unrealistic returns</li>
+                <li><strong>Phishing Attacks:</strong> Fake websites mimicking legitimate DeFi protocols</li>
+                <li><strong>Rug Pulls:</strong> Developers abandoning projects after collecting funds</li>
+                <li><strong>Fake Token Sales:</strong> Fraudulent ICOs and token offerings</li>
+                <li><strong>Smart Contract Exploits:</strong> Malicious contracts designed to steal funds</li>
+            </ul>
+
+            <h2>Data Collection and Preprocessing</h2>
+            <p>Effective scam detection begins with comprehensive data collection from the Ethereum blockchain:</p>
+
+            <h3>Blockchain Data Sources</h3>
+            <ul>
+                <li><strong>Transaction Data:</strong> Value transfers, gas usage, frequency patterns</li>
+                <li><strong>Smart Contract Code:</strong> Bytecode analysis and function signatures</li>
+                <li><strong>Address Behavior:</strong> Transaction patterns and network connections</li>
+                <li><strong>Token Metadata:</strong> Token creation, distribution, and trading patterns</li>
+            </ul>
+
+            <pre><code># Example: Extracting transaction features
+import pandas as pd
+from web3 import Web3
+
+def extract_transaction_features(tx_hash):
+    """Extract relevant features from Ethereum transaction"""
+    tx = w3.eth.get_transaction(tx_hash)
+    receipt = w3.eth.get_transaction_receipt(tx_hash)
+    
+    features = {
+        'value': tx['value'],
+        'gas_price': tx['gasPrice'],
+        'gas_used': receipt['gasUsed'],
+        'to_address': tx['to'],
+        'from_address': tx['from'],
+        'block_number': tx['blockNumber'],
+        'transaction_index': tx['transactionIndex']
+    }
+    
+    return features</code></pre>
+
+            <h2>Feature Engineering</h2>
+            <p>Creating meaningful features is crucial for effective scam detection:</p>
+
+            <h3>Address-Level Features</h3>
+            <ul>
+                <li><strong>Transaction Volume:</strong> Total ETH sent/received</li>
+                <li><strong>Transaction Frequency:</strong> Number of transactions per time period</li>
+                <li><strong>Network Centrality:</strong> Position in the transaction graph</li>
+                <li><strong>Age and Activity:</strong> Account creation time and activity patterns</li>
+            </ul>
+
+            <h3>Smart Contract Features</h3>
+            <ul>
+                <li><strong>Code Complexity:</strong> Number of functions and operations</li>
+                <li><strong>External Calls:</strong> Interactions with other contracts</li>
+                <li><strong>Access Controls:</strong> Presence of admin functions</li>
+                <li><strong>Token Economics:</strong> Supply mechanisms and distribution</li>
+            </ul>
+
+            <h2>Machine Learning Models</h2>
+            <p>Several ML approaches can be effective for Ethereum scam detection:</p>
+
+            <h3>Supervised Learning</h3>
+            <p>Using labeled datasets of known scams and legitimate addresses:</p>
+
+            <pre><code># Example: Random Forest classifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report
+
+# Prepare features and labels
+X = df[feature_columns]
+y = df['is_scam']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42, stratify=y
+)
+
+# Train model
+rf_model = RandomForestClassifier(
+    n_estimators=100,
+    max_depth=10,
+    random_state=42
+)
+rf_model.fit(X_train, y_train)
+
+# Evaluate
+y_pred = rf_model.predict(X_test)
+print(classification_report(y_test, y_pred))</code></pre>
+
+            <h3>Unsupervised Learning</h3>
+            <p>Detecting anomalous patterns without labeled data:</p>
+
+            <ul>
+                <li><strong>Isolation Forest:</strong> Identifying outlier transactions</li>
+                <li><strong>Clustering:</strong> Grouping similar address behaviors</li>
+                <li><strong>Autoencoders:</strong> Learning normal transaction patterns</li>
+            </ul>
+
+            <h3>Graph Neural Networks</h3>
+            <p>Leveraging the network structure of blockchain transactions:</p>
+
+            <pre><code># Example: Graph-based feature extraction
+import networkx as nx
+
+def build_transaction_graph(transactions):
+    """Build directed graph from transaction data"""
+    G = nx.DiGraph()
+    
+    for tx in transactions:
+        G.add_edge(
+            tx['from_address'], 
+            tx['to_address'],
+            weight=tx['value'],
+            timestamp=tx['timestamp']
+        )
+    
+    return G
+
+def calculate_graph_features(G, address):
+    """Calculate graph-based features for an address"""
+    features = {
+        'in_degree': G.in_degree(address),
+        'out_degree': G.out_degree(address),
+        'betweenness_centrality': nx.betweenness_centrality(G)[address],
+        'pagerank': nx.pagerank(G)[address]
+    }
+    
+    return features</code></pre>
+
+            <h2>Real-Time Detection System</h2>
+            <p>Implementing a production-ready scam detection system requires:</p>
+
+            <h3>Architecture Components</h3>
+            <ul>
+                <li><strong>Data Pipeline:</strong> Real-time blockchain data ingestion</li>
+                <li><strong>Feature Store:</strong> Cached features for fast inference</li>
+                <li><strong>Model Serving:</strong> Scalable prediction endpoints</li>
+                <li><strong>Alert System:</strong> Notifications for detected scams</li>
+            </ul>
+
+            <h3>Performance Considerations</h3>
+            <ul>
+                <li><strong>Latency:</strong> Sub-second prediction times</li>
+                <li><strong>Throughput:</strong> Handling thousands of transactions per second</li>
+                <li><strong>Accuracy:</strong> Minimizing false positives and negatives</li>
+                <li><strong>Scalability:</strong> Adapting to network growth</li>
+            </ul>
+
+            <h2>Evaluation Metrics</h2>
+            <p>Measuring the effectiveness of scam detection models:</p>
+
+            <ul>
+                <li><strong>Precision:</strong> Percentage of flagged addresses that are actual scams</li>
+                <li><strong>Recall:</strong> Percentage of actual scams that are detected</li>
+                <li><strong>F1-Score:</strong> Harmonic mean of precision and recall</li>
+                <li><strong>AUC-ROC:</strong> Area under the receiver operating characteristic curve</li>
+                <li><strong>Detection Time:</strong> How quickly new scams are identified</li>
+            </ul>
+
+            <h2>Challenges and Limitations</h2>
+            <p>Several challenges exist in Ethereum scam detection:</p>
+
+            <ul>
+                <li><strong>Evolving Tactics:</strong> Scammers adapt to detection methods</li>
+                <li><strong>Data Imbalance:</strong> Scams are rare compared to legitimate transactions</li>
+                <li><strong>Privacy Concerns:</strong> Balancing detection with user privacy</li>
+                <li><strong>False Positives:</strong> Avoiding flagging legitimate activities</li>
+                <li><strong>Cross-Chain Complexity:</strong> Scams spanning multiple blockchains</li>
+            </ul>
+
+            <h2>Future Directions</h2>
+            <p>The field of blockchain fraud detection continues to evolve:</p>
+
+            <ul>
+                <li><strong>Federated Learning:</strong> Collaborative model training without data sharing</li>
+                <li><strong>Explainable AI:</strong> Understanding why addresses are flagged as scams</li>
+                <li><strong>Multi-Modal Analysis:</strong> Combining on-chain and off-chain data</li>
+                <li><strong>Real-Time Adaptation:</strong> Models that learn from new scam patterns</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Machine learning offers powerful tools for detecting Ethereum scams, but success requires careful attention to data quality, feature engineering, and model selection. As the blockchain ecosystem continues to evolve, so too must our approaches to fraud detection.</p>
+
+            <p>The key to effective scam detection lies in combining multiple techniques: supervised learning for known patterns, unsupervised learning for novel scams, and graph analysis for network-based insights. By staying ahead of evolving scam tactics and continuously improving our models, we can help protect users and maintain trust in the decentralized finance ecosystem.</p>
+
+            <a href="https://github.com/FrankyDBravo" class="github-link" target="_blank" rel="noopener noreferrer">
+                View Implementation on GitHub
+            </a>
+        </div>
+    </div>
+</body>
+</html>
