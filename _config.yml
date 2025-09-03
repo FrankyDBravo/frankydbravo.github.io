@@ -4,7 +4,7 @@
 # Site settings
 title: "Tom - Data Scientist"
 description: "Data Scientist Portfolio. Explore my projects, blog posts, and get in touch."
-url: "https://your-username.github.io" # Update with your GitHub Pages URL
+url: "https://FrankyDBravo.github.io" # Update with your GitHub Pages URL
 baseurl: "" # Leave empty if hosting at root domain
 
 # Author information
@@ -66,7 +66,7 @@ social:
   name: Tom
   links:
     - https://twitter.com/your-twitter-handle
-    - https://github.com/your-username
+    - https://github.com/FrankyDBravo
 
 # Google Analytics (optional)
 google_analytics: # Your Google Analytics tracking ID
@@ -112,7 +112,7 @@ navigation:
 # Footer links
 footer_links:
   - title: "GitHub"
-    url: "https://github.com/your-username"
+    url: "https://github.com/FrankyDBravo"
     icon: "github"
   - title: "Email"
     url: "mailto:supertom02@hotmail.com"

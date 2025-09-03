@@ -87,8 +87,8 @@ Update the following files with your own content:
    git add .
    git commit -m "Initial portfolio setup"
    
-   # Create GitHub repository (replace 'your-username' with your GitHub username)
-   git remote add origin https://github.com/your-username/your-username.github.io.git
+   # Create GitHub repository (replace 'FrankyDBravo' with your GitHub username)
+   git remote add origin https://github.com/FrankyDBravo/FrankyDBravo.github.io.git
    git branch -M main
    git push -u origin main
    ```
@@ -101,7 +101,7 @@ Update the following files with your own content:
    - Choose "main" branch and "/ (root)" folder
    - Click "Save"
 
-3. Your site will be available at: `https://your-username.github.io`
+3. Your site will be available at: `https://FrankyDBravo.github.io`
 
 #### Option B: Custom Domain
 
@@ -113,7 +113,7 @@ If you have a custom domain:
    ```
 
 2. Configure your domain's DNS to point to GitHub Pages:
-   - Add a CNAME record pointing to `your-username.github.io`
+   - Add a CNAME record pointing to `FrankyDBravo.github.io`
 
 ### 4. Optional: Enable Jekyll (Static Site Generation)
 
